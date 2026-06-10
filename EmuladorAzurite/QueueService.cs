@@ -1,4 +1,4 @@
-﻿using Azure.Storage.Queues;
+using Azure.Storage.Queues;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -11,7 +11,10 @@ namespace EmuladorAzurite
         {
             var connectionString = "DefaultEndpointsProtocol=http;AccountName=devstoreaccount1;AccountKey=Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==;QueueEndpoint=http://127.0.0.1:10001/devstoreaccount1;";
 
-            var client = new QueueClient(connectionString, "queue1");
+            var options = new QueueClientOptions(QueueClientOptions.ServiceVersion.V2025_11_05);
+            options.Diagnostics.IsLoggingEnabled = false;
+
+            var client = new QueueClient(connectionString, "queue1", options);
             await client.SendMessageAsync("mensagem #1");
             await client.SendMessageAsync("mensagem #2");
 
