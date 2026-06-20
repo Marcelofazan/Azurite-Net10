@@ -1,11 +1,8 @@
 ## ⚙️ Azurite10-Emulador
 Exemplo da utilização de Blob, Queue e Table com Emulador Azurite utilizando Azure Storage Explorer em C# .NET 10.
 
-#### Requisitos do Projeto
-
-Faça o Download em :
-- [Azure Storage Explorer](https://azure.microsoft.com/en-us/products/storage/storage-explorer)
-
+#### 💬 Requisitos do Projeto
+Faça o Download em : [Azure Storage Explorer](https://azure.microsoft.com/en-us/products/storage/storage-explorer)
 
 Após instalação em Variáveis de Ambiente, clique em Editar as variáveis de ambiente do sistema.
 Na lista de Variáveis do usuário, procure pela linha chamada Path e dê um duplo clique nela.
@@ -33,7 +30,6 @@ Para iniciar o emulador abra o Powershell ou Prompt de Comando como **Administra
 
 - Botão inverso Atualizar em **(Emulador Portas Padrão)**
 
-
 Crie as 3 opções , utilizando botão inverso em cada uma. 
 
 Conteineres de Blob ->  Botão inverso -> Criar container de Blob , escreva 
@@ -48,5 +44,4 @@ Tabelas ->  Botão inverso -> Criar Tabela, escreva
 ```bash 
 produtos
 ```
-
 Execute o projeto , após execução selecione cada opção e clique em Atualizar para que atualize as informações no Azure Storage Explorer.
